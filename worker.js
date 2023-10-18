@@ -2934,7 +2934,7 @@ var src_default = {
     }
     const urlParam = url.searchParams.get("url");
     if (!urlParam)
-      return new Response("Missing URL parameter", { status: 400 });
+      return new Response("Missing URL parameter, use web ui: https://sub-web.netlify.app/ ", { status: 400 });
     const backendParam = url.searchParams.get("bd");
     if (backendParam && /^(https?:\/\/[^/]+)[.].+$/g.test(backendParam))
       backend = backendParam.replace(/(https?:\/\/[^/]+).*$/, "$1");
